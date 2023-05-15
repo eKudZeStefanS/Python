@@ -22,7 +22,7 @@ def quit():
     return 0
 def main():
     while True:
-        print("Введите +, -, *, / для соответствующей операции")
+        print("Введите +, -, *, / для начала вычисления")
         print("Введите 0 для выхода из программы")
         operation = input("Операция: ")
         if operation == '0':
@@ -34,9 +34,9 @@ def main():
         if operation == '+':
             result = add(num1, num2)
         elif operation == '-':
-            result = subtract(num1, num2)
+            result = minus(num1, num2)
         elif operation == '*':
-            result = multiply(num1, num2)
+            result = ymnogenie(num1, num2)
         elif operation == '/':
             result = divide(num1, num2)
         else:
