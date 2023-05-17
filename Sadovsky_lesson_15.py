@@ -1,3 +1,11 @@
+def print_input_type(func):
+    def wrapper(data):
+        data_type = type(data).__name__
+        print(f"Функция получила данные типа: {data_type}")
+        return func(data)
+    return wrapper
+
+@print_input_type
 def count_chars(data):
     if isinstance(data, tuple):
         return sum(len(str(x)) for x in data if isinstance(x, str))
